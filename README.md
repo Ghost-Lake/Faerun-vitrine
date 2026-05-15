@@ -56,20 +56,6 @@ src/jeu/
 
 ---
 
-## 🚀 Lancement
-
-```bash
-# 1. Cloner le dépôt
-git clone https://github.com/Ghost-Lake/rajalun.git
-cd rajalun
-
-# 2. Ouvrir dans IntelliJ et lancer Application.java dans src/jeu/
-```
-
-> ⚠️ Le fichier `conf/debug-logging.properties` doit être accessible depuis le répertoire de travail pour que le système de logging fonctionne.
-
----
-
 ## 🎮 Déroulement d'une partie
 
 ```
@@ -91,17 +77,6 @@ Mode continu : oui
 ```
 
 Le jeu se termine lorsqu'une des deux armées est entièrement éliminée.
-
----
-
-## 🧩 Ce projet fait partie du module R2.01
-
-Ce dépôt contient également deux autres exercices réalisés dans le cadre du même module :
-
-| Dossier | Description |
-|---|---|
-| `src/exercice1/` | Gestion d'une carte de restaurant (plats, menus, prix) |
-| `src/TPInstruments/` | Planification de séances d'instruments de musique pour enfants |
 
 ---
 
