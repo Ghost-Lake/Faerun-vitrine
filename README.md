@@ -13,7 +13,7 @@
   - 👑 **Chef Elfe** — Force ×4 par rapport à la base
   - 🏰 **Chef Nain** — Dégâts reçus / 4 par rapport à la base
 - **Système de combat** — les guerriers s'affrontent case par case lors de leurs rencontres
-- **Coups divins** — événements aléatoires gérés via exception (`CoupDivinException`)
+- **Coups divins** — Événements générés lorsqu'un guerrier attaque avec le max de dégâts possible, situation gérée via exception (`CoupDivinException`)
 - **Mode continu ou pas-à-pas** — rejoue chaque tour automatiquement ou attend une validation
 - **Mode accumulation** — les guerriers peuvent s'accumuler sur une même case avant de combattre
 - **Affichage du plateau** dans le terminal avec rendu ASCII
