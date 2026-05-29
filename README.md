@@ -9,9 +9,9 @@
 - **Deux factions** qui s'affrontent sur un plateau linéaire configurable
 - **4 types de guerriers** avec des statistiques différentes :
   - 🧝 **Elfe** — Force ×2 par rapport à la base
-  - 🪨 **Nain** — Défense renforcée
-  - 👑 **Chef Elfe** — Commandant elfique avec bonus de commandement
-  - 🏰 **Chef Nain** — Commandant nain avec capacités spéciales
+  - 🪨 **Nain** — Dégâts reçus / 2 par rapport à la base
+  - 👑 **Chef Elfe** — Force ×4 par rapport à la base
+  - 🏰 **Chef Nain** — Dégâts reçus / 4 par rapport à la base
 - **Système de combat** — les guerriers s'affrontent case par case lors de leurs rencontres
 - **Coups divins** — événements aléatoires gérés via exception (`CoupDivinException`)
 - **Mode continu ou pas-à-pas** — rejoue chaque tour automatiquement ou attend une validation
