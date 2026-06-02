@@ -77,25 +77,6 @@ src/
 
 ---
 
-## 🛠️ Prérequis et Installation
-
-### Prérequis
-- **Java Development Kit (JDK)** version 8 ou supérieure.
-- Un terminal d'invite de commandes (CMD, PowerShell, Bash...).
-
-### Compilation et Exécution
-1. Ouvrez votre terminal et placez-vous dans le répertoire source racine `src`.
-2. Compilez l'ensemble des fichiers Java :
-   ```bash
-   javac jeu/Application.java
-   ```
-3. Lancez le jeu :
-   ```bash
-   java jeu.Application
-   ```
-
----
-
 ## ⚙️ Mécaniques de Jeu
 
 - **Entraînement** : Chaque tour, les châteaux génèrent des ressources permettant de former de nouvelles unités.
