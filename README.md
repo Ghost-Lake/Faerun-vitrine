@@ -1,126 +1,114 @@
-# ⚔️ Faërun — Jeu de stratégie en Java
-
-> **Module R2.01 — Développement Orienté Objet** | BUT Informatique (1ère année) — IUT2 Grenoble.
-
+# 🏰 Projet : Jeu Faërun
+<div align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/Terminal-4D4D4D?style=for-the-badge&logo=windows-terminal&logoColor=white" alt="Terminal" />
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status" />
+<p align="center">
+  <i>Un mini-jeu de stratégie au tour par tour développé en Java, jouable via le terminal.</i>
+</p>
+  <h1>⚔️ Jeu Faërun 🏰</h1>
+  <p>
+    <i>Un jeu de stratégie au tour par tour développé en Java, conçu pour le terminal.</i>
+  </p>
+</div>
+<br />
+## 📖 Table des matières
+- [À propos du projet](#-à-propos-du-projet)
+- [Objectifs et Compétences](#-objectifs-et-compétences)
+- [Architecture du Code](#-architecture-du-code)
+- [Prérequis et Installation](#-prérequis-et-installation)
+- [Mécaniques de Jeu](#-mécaniques-de-jeu)
+- [Cadre du Projet (PPP)](#-cadre-du-projet-ppp)
 ---
-
-## 📝 Description du projet
-
-Faërun est un jeu de stratégie au tour par tour développé en Java, s'exécutant intégralement dans le terminal avec un rendu en art ASCII. 
-
-Le concept repose sur l'affrontement linéaire de deux armées (l'armée Bleue 🔵 et l'armée Rouge 🔴) situées aux extrémités opposées d'un plateau configurable. Chaque faction possède un château qui entraîne et déploie des guerriers dotés de caractéristiques spécifiques. Les unités avancent case par case et s'affrontent dès qu'elles se croisent. La partie prend fin lorsqu'une des deux armées est totalement exterminée.
-
-Le moteur de jeu intègre des fonctionnalités avancées telles que la gestion des coups critiques divins (via des exceptions personnalisées), un mode pas-à-pas ou continu, et une option d'accumulation stratégique des troupes sur une même case avant le déclenchement des combats.
-
+## 📜 Description
+**Faërun** est un mini-jeu de stratégie en Java. Le concept oppose deux camps, les **Rouges** et les **Bleus**, chacun possédant un château. L'objectif est d'entraîner des guerriers (**Elfes**, **Chefs Elfes**, **Nains**, **Chefs Nains**) pour les envoyer sur un plateau de jeu constitué de carreaux. La partie se termine lorsqu'un guerrier d'une équipe parvient à atteindre le château adverse.
+## 🚀 À propos du projet
+**Faërun** est un mini-jeu de stratégie en Java s'exécutant dans le terminal. L'univers oppose deux factions rivales, les **Rouges** et les **Bleus**, luttant pour la suprématie. Chaque équipe contrôle un château fortifié. 
+L'objectif principal est d'entraîner stratégiquement des unités (Elfes, Chefs Elfes, Nains, Chefs Nains) et de les déployer sur un plateau de jeu constitué de carreaux. La victoire est remportée lorsqu'un guerrier parvient à infiltrer le château adverse.
 ---
-
-## 🎯 Objectifs du projet
-
-L'objectif principal de ce projet était de mettre en pratique les concepts fondamentaux de la **Programmation Orientée Objet (POO)** en Java à travers un cas d'usage ludique mais complexe. 
-
-Plus spécifiquement, les objectifs techniques étaient :
-* Maîtriser les concepts d'**héritage** et de **polymorphisme** à travers la modélisation des différentes classes de guerriers.
-* Implémenter une architecture logicielle propre et découpée en packages (modèle, logique de jeu, utilitaires).
-* Gérer la robustesse du code à l'aide des **exceptions Java**.
-* Manipuler les structures de données (listes, tris personnalisés) pour ordonner les combats et gérer l'état du plateau.
-
+## 🎯 Objectifs
+Le projet visait à mettre en application les principes de la programmation orientée objet en Java pour :
+- **Modéliser une logique de jeu complexe** : gestion des ressources, systèmes de combat au tour par tour, déplacement sur un plateau.
+- **Implémenter des mécaniques spécifiques** : basées sur des ratios de force et de points de vie différenciés selon les classes de personnages.
+- **Gérer l'interaction entre deux entités distinctes** : gestion des rôles (attaquant/défenseur) en respectant des règles de priorité et de séquençage précises.
+## 🎯 Objectifs et Compétences
+La conception de Faërun a été un excellent moyen de mettre en pratique et de consolider des concepts avancés de développement logiciel en Java.
+### Objectifs Techniques
+- **Modélisation d'une logique complexe** : Conception du système de combat au tour par tour, de la gestion de l'économie (ressources) et du système de déplacement sur le plateau.
+- **Mécaniques asymétriques** : Implémentation d'un équilibrage via des ratios de force, de dégâts et de points de vie variables selon les classes.
+- **Gestion des interactions** : Mise en place des rôles (attaquant/défenseur) et d'un séquençage strict des priorités de combat.
+### Compétences, Techniques et Savoir-faire Acquis
+- **Programmation Orientée Objet (POO)** : Structuration du code avec des responsabilités claires entre les objets.
+- **Héritage et Polymorphisme** : Utilisation intensive pour gérer la hiérarchie des guerriers (classe parente et classes spécifiques) pour factoriser les comportements communs tout en spécialisant les attaques.
+- **Robustesse et Gestion d'erreurs** : Sécurisation du flux d'exécution via la gestion des exceptions Java.
+- **Algorithmique et Structures de données** : Utilisation experte des listes et conception d'algorithmes de tri personnalisés pour dicter le déroulement des combats, l'état du plateau et l'ordre des tours.
 ---
-
-## 🛠️ Compétences développées
-
-Ce projet s'inscrit dans la validation des compétences du BUT Informatique, notamment :
-* **Compétence 1 : Réaliser un développement d'application**
-    * Conception d'une architecture orientée objet respectant les principes de responsabilité unique.
-    * Codage, test et débogage d'un algorithme de jeu en mode continu et pas-à-pas.
-* **Compétence 2 : Travailler dans une équipe informatique**
-    * Utilisation d'outils de versioning (Git) et répartition équitable des tâches.
-    * Communication technique pour l'intégration des différents modules du jeu.
-
+## 💡 Compétences, Techniques et Savoir-faire Acquis
+La réalisation de ce projet m'a permis de consolider les bases de la programmation orientée objet et de mettre en pratique plusieurs concepts techniques :
+## 📂 Architecture du Code
+- **Héritage et Polymorphisme** : Utilisés pour modéliser la hiérarchie des différents types de guerriers et leurs comportements spécifiques.
+- **Robustesse du code** : Mise en place d'une gestion des erreurs via les exceptions Java.
+- **Manipulation de structures de données** : Utilisation de listes et implémentation de tris personnalisés pour gérer efficacement l'état du plateau, l'ordre des tours et le déroulement des combats.
+Le projet suit une architecture modulaire pour séparer clairement les responsabilités (Logique de jeu, Entités, Plateau).
+```text
+src/
+└── jeu/
+    ├── Application.java               # Point d'entrée principal et boucle de jeu
+    ├── guerrier/                      # Package dédié aux unités combattantes
+    │   ├── Guerrier.java              # Classe de base (Abstraite / Parente)
+    │   ├── GuerrierUtilitaire.java    # Logique utilitaire pour les combats
+    │   ├── type/                      # Classes spécialisées des guerriers
+    │   │   ├── Elf.java / ChefElf.java
+    │   │   └── Nain.java / ChefNain.java
+    │   └── miscellaneous/
+    │       ├── ComparaisonGuerrierDefense.java # Logique de tri personnalisée (défense)
+    │       └── CoupDivinException.java         # Exception liée aux événements de combat
+    ├── plateauDeJeu/                  # Package gérant l'environnement spatial
+    │   ├── Plateau.java / PlateauUtilitaire.java
+    │   ├── carreau/                   # Gestion des cases individuelles du plateau
+    │   │   └── Carreau.java / CarreauUtilitaire.java
+    │   └── chateau/                   # Gestion des bases d'équipes et ressources
+    │       └── Chateau.java / Couleur.java
+    └── test/                          # Scénarios de tests d'intégration et de validation
+        ├── TestGuerrier.java
+        ├── TestEtape2.java
+        └── TestEtape3.java
+```
 ---
-
-## 👥 Travail en groupe
-
-Le projet a été réalisé en équipe, ce qui a nécessité une phase de conception commune essentielle :
-* **Conception initiale** : Modélisation conjointe du diagramme de classes UML pour s'accorder sur les relations entre le Plateau, les Châteaux et les Guerriers.
-* **Méthodologie** : Utilisation de Git pour fusionner le code et d'échanges réguliers pour s'assurer de la compatibilité entre l'affichage (plateau) et la logique métier (combats).
-* **Bilan collectif** : Cette collaboration a permis d'aboutir à un code modulaire où l'ajout d'un nouveau type de guerrier ou d'une nouvelle règle de combat n'impactait pas le reste du système.
-
+## 👥 Travail en Groupe
+Ce projet a été réalisé en **autonomie complète** (travail en solo).
+## 🛠️ Prérequis et Installation
+### Prérequis
+- **Java Development Kit (JDK)** version 8 ou supérieure.
+- Un terminal d'invite de commandes (CMD, PowerShell, Bash...).
+### Compilation et Exécution
+1. Ouvrez votre terminal et placez-vous dans le répertoire source racine `src`.
+2. Compilez l'ensemble des fichiers Java :
+   ```bash
+   javac jeu/Application.java
+   ```
+3. Lancez le jeu :
+   ```bash
+   java jeu.Application
+   ```
 ---
-
-## 👤 Travail individuel dans le groupe
-
-*En tant que membre de l'équipe, j'ai pris en charge des aspects clés de l'application :*
-*(👉 **Note à l'étudiant** : Personnalise cette liste selon ce que tu as fait. Voici des exemples basés sur ton code) :*
-
-* **Modélisation et Cycle de vie des Guerriers** : Conception de la classe abstraite `Guerrier` et implémentation des mécanismes d'héritage pour les classes dérivées (`Elf`, `Nain`, `ChefElf`, `ChefNain`).
-* **Algorithme de Tri** : Développement du comparateur personnalisé `ComparaisonGuerrierDefense` pour trier les guerriers selon leur statistique de défense lors des phases critiques du jeu.
-* **Gestion des Erreurs** : Création et intégration de l'exception personnalisée `CoupDivinException` afin d'isoler la logique des événements aléatoires majeurs lors des attaques.
-* **Refactoring et Utilitaires** : Structuration des classes `GuerrierUtilitaire` et `CarreauUtilitaire` afin de séparer proprement les calculs mathématiques et algorithmiques de l'état des objets.
-
+## 👤 Travail Individuel dans le Groupe
+L'intégralité du projet, de la conception à l'implémentation finale, a été réalisée individuellement. Cela inclut :
+- **La modélisation des classes** (Guerriers, Châteaux, Plateau).
+- **La gestion de la boucle de jeu** (entraînement, déplacement, résolution des combats).
+- **L'implémentation des algorithmes de combat et de calcul de dégâts**.
+## ⚙️ Mécaniques de Jeu
+- **Entraînement** : Chaque tour, les châteaux génèrent des ressources permettant de former de nouvelles unités.
+- **Déplacement** : Les unités avancent de carreau en carreau vers le château adverse.
+- **Combat** : Lorsqu'une unité alliée rencontre une unité ennemie sur un même carreau, le combat s'engage. Les dégâts sont calculés selon la force de frappe, la classe du personnage (Elfe, Nain...) et les probabilités intégrées dans les calculs (Coup Divin).
 ---
-
-## 🧠 Techniques et savoir-faire acquis
-
-Ce projet m'a permis d'acquérir et de consolider plusieurs compétences techniques majeures en Java :
-* **Abstraction & Polymorphisme** : Utilisation d'une classe de base abstraite `Guerrier` permettant de manipuler des listes d'unités hétérogènes de manière uniforme lors des déplacements et des combats.
-* **Gestion des Exceptions Professionnelle** : Implémentation de blocs `try-catch` et levée d'exceptions métiers (`CoupDivinException`) pour gérer les comportements d'attaque maximum sans polluer la boucle de jeu principale.
-* **Encapsulation & Énumérations** : Utilisation stricte des modificateurs d'accès (`private`, `protected`) et des `enum` (`Couleur.java`) pour sécuriser les données de l'application.
-* **Rendu sur Terminal Avancé** : Gestion des flux d'affichage ASCII pour simuler une interface graphique dynamique en mode console (classe `PlateauUtilitaire`).
-
----
-
-## 🏗️ Structure technique du projet
-
-L'application est découpée en packages spécialisés :
-
-src/jeu/
-├── Application.java                 # Point d'entrée — initialisation et boucle de jeu
-├── guerrier/
-│   ├── Guerrier.java                # Classe abstraite de base pour tous les guerriers
-│   ├── GuerrierUtilitaire.java      # Initialisation des armées dans les châteaux
-│   ├── type/
-│   │   ├── Elf.java                 # Guerrier Elfe (force ×2)
-│   │   ├── Nain.java                # Guerrier Nain (dégâts reçus / 2)
-│   │   ├── ChefElf.java             # Chef Elfe (force ×4)
-│   │   └── ChefNain.java            # Chef Nain (dégâts reçus / 4)
-│   └── miscellaneous/
-│       ├── ComparaisonGuerrierDefense.java   # Comparateur pour trier par défense
-│       └── CoupDivinException.java           # Exception pour les coups spéciaux
-└── plateauDeJeu/
-├── Plateau.java                 # Gestion du plateau et de la progression des guerriers
-├── PlateauUtilitaire.java       # Affichage et saisie des paramètres du plateau
-├── carreau/
-│   ├── Carreau.java             # Une case du plateau (champ de bataille potentiel)
-│   └── CarreauUtilitaire.java   # Logique algorithmique du combat sur une case
-└── chateau/
-├── Chateau.java             # Château qui entraîne et produit des guerriers
-└── Couleur.java             # Énumération BLEU / ROUGE
-
-
----
-
-## 🎮 Aperçu du déroulement d'une partie
-
-╔════════════════════════════════════════════════════════╗
-║                        JEU DE FAËRUN                   ║
-╚════════════════════════════════════════════════════════╝
-
-Longueur du plateau : 10
-Mode accumulation : non
-Mode continu : oui
-
-╔════════════════════════════════════════════════════════╗
-║                        DÉBUT DU JEU                    ║
-╚════════════════════════════════════════════════════════╝
-
-[🔵🔵🔵] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [🔴🔴🔴]
-... tour 4 ...
-[  ] [ ] [🔵⚔️🔴] [ ] [ ] [ ] [ ] [ ] [ ] [  ]
-
-
----
-
-## 🔧 Prérequis & Installation
-
-* **Java JDK 11** ou version supérieure.
-* Environnement de développement recommandé : **IntelliJ IDEA** (les fichiers de configuration `.iml` et `conf/debug-logging.properties` sont inclus pour faciliter le débogage).
+<p align="center">
+  <i>Développé dans le cadre d'un Projet Personnel et Professionnel (PPP)</i>
+</p>
+## 🎓 Cadre du Projet
+Ce projet s'inscrit dans un contexte académique, dont voici les détails de réalisation :
+- **Travail en groupe** : Ce projet a été réalisé en **autonomie complète** (travail en solo).
+- **Travail individuel dans le groupe** : L'intégralité du projet, de la conception à l'implémentation finale, a été réalisée individuellement. Cela inclut :
+  - **La modélisation des classes** (Guerriers, Châteaux, Plateau).
+  - **La gestion de la boucle de jeu** (entraînement, déplacement, résolution des combats).
+  - **L'implémentation des algorithmes de combat et de calcul de dégâts**.
